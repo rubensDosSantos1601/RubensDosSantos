@@ -1,0 +1,1049 @@
+/* ==========================================================
+   Portfolio - Rubens dos Santos
+   style.css
+   ========================================================== */
+
+/* ---------- RESET ---------- */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#070b15;
+
+    color:#f5f7fa;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ---------- VARIÁVEIS ---------- */
+
+:root{
+
+    --primary:#3b82f6;
+    --secondary:#60a5fa;
+
+    --dark:#070b15;
+    --dark2:#111827;
+    --dark3:#1f2937;
+
+    --glass:rgba(255,255,255,.05);
+
+    --border:rgba(255,255,255,.08);
+
+    --text:#ffffff;
+    --text2:#b8c0d0;
+
+    --shadow:0 20px 40px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+    --transition:.35s;
+
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+/* ---------- PARTÍCULAS ---------- */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+}
+
+/* ---------- GRADIENTE DO FUNDO ---------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:900px;
+
+    height:900px;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(59,130,246,.15),
+        transparent 70%);
+
+    top:-350px;
+
+    right:-250px;
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+
+    height:700px;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(0,180,255,.08),
+        transparent 70%);
+
+    left:-250px;
+
+    bottom:-250px;
+
+    z-index:-1;
+
+}
+
+/* ==========================================================
+                        HEADER
+   ========================================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(7,11,21,.65);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+header .container{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ---------- LOGO ---------- */
+
+.logo{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #0ea5e9
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    font-size:22px;
+
+    box-shadow:0 0 30px rgba(59,130,246,.35);
+
+}
+
+/* ---------- MENU ---------- */
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:#cbd5e1;
+
+    position:relative;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-8px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ---------- HAMBURGUER ---------- */
+
+#hamburger{
+
+    display:none;
+
+    cursor:pointer;
+
+    font-size:30px;
+
+}
+
+/* ==========================================================
+                        HERO
+   ========================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.subtitle{
+
+    color:var(--secondary);
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+    line-height:1.1;
+
+}
+
+.hero h2{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:30px;
+
+}
+
+.hero p{
+
+    color:var(--text2);
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+}
+
+/* ---------- BOTÕES ---------- */
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #2563eb
+    );
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(59,130,246,.25);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.btn-secondary{
+
+    border:1px solid var(--border);
+
+    background:var(--glass);
+
+    backdrop-filter:blur(20px);
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* ---------- FOTO ---------- */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:380px;
+
+    border-radius:50%;
+
+    border:4px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 60px rgba(59,130,246,.25);
+
+}
+
+/* ==========================================================
+                    SEÇÕES
+   ========================================================== */
+
+section{
+
+    padding:120px 0;
+
+}
+
+section h2{
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+section>div>p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:var(--text2);
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+                        CARDS
+   ========================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:rgba(59,130,246,.45);
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+.card p{
+
+    color:var(--text2);
+
+}
+
+/* ==========================================================
+   Portfolio - Rubens dos Santos
+   style.css
+   ========================================================== */
+
+/* ---------- RESET ---------- */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#070b15;
+
+    color:#f5f7fa;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ---------- VARIÁVEIS ---------- */
+
+:root{
+
+    --primary:#3b82f6;
+    --secondary:#60a5fa;
+
+    --dark:#070b15;
+    --dark2:#111827;
+    --dark3:#1f2937;
+
+    --glass:rgba(255,255,255,.05);
+
+    --border:rgba(255,255,255,.08);
+
+    --text:#ffffff;
+    --text2:#b8c0d0;
+
+    --shadow:0 20px 40px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+    --transition:.35s;
+
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+/* ---------- PARTÍCULAS ---------- */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+}
+
+/* ---------- GRADIENTE DO FUNDO ---------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:900px;
+
+    height:900px;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(59,130,246,.15),
+        transparent 70%);
+
+    top:-350px;
+
+    right:-250px;
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+
+    height:700px;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(0,180,255,.08),
+        transparent 70%);
+
+    left:-250px;
+
+    bottom:-250px;
+
+    z-index:-1;
+
+}
+
+/* ==========================================================
+                        HEADER
+   ========================================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(7,11,21,.65);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+header .container{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ---------- LOGO ---------- */
+
+.logo{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #0ea5e9
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    font-size:22px;
+
+    box-shadow:0 0 30px rgba(59,130,246,.35);
+
+}
+
+/* ---------- MENU ---------- */
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:#cbd5e1;
+
+    position:relative;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-8px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ---------- HAMBURGUER ---------- */
+
+#hamburger{
+
+    display:none;
+
+    cursor:pointer;
+
+    font-size:30px;
+
+}
+
+/* ==========================================================
+                        HERO
+   ========================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.subtitle{
+
+    color:var(--secondary);
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+    line-height:1.1;
+
+}
+
+.hero h2{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:30px;
+
+}
+
+.hero p{
+
+    color:var(--text2);
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+}
+
+/* ---------- BOTÕES ---------- */
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #2563eb
+    );
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(59,130,246,.25);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.btn-secondary{
+
+    border:1px solid var(--border);
+
+    background:var(--glass);
+
+    backdrop-filter:blur(20px);
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* ---------- FOTO ---------- */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:380px;
+
+    border-radius:50%;
+
+    border:4px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 60px rgba(59,130,246,.25);
+
+}
+
+/* ==========================================================
+                    SEÇÕES
+   ========================================================== */
+
+section{
+
+    padding:120px 0;
+
+}
+
+section h2{
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+section>div>p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:var(--text2);
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+                        CARDS
+   ========================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:rgba(59,130,246,.45);
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+.card p{
+
+    color:var(--text2);
+
+}
