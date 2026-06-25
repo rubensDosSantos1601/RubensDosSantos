@@ -1047,3 +1047,44 @@ section>div>p{
     color:var(--text2);
 
 }
+
+/* ==========================================================
+   HEADER SCROLLED STATE
+========================================================== */
+
+header.scrolled{
+
+    background:rgba(7,11,21,.85);
+    backdrop-filter:blur(25px);
+    border-bottom:1px solid rgba(59,130,246,.25);
+
+}
+
+/* LINK ATIVO NO MENU */
+
+nav a.active{
+
+    color:#3b82f6;
+
+}
+
+nav a.active::after{
+
+    width:100%;
+
+}
+
+/* MENU MOBILE ANIMATION */
+
+nav{
+
+    transition:.4s ease;
+
+}
+
+#hamburger.active{
+
+    transform:rotate(90deg);
+    transition:.3s ease;
+
+}
