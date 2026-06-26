@@ -13,12 +13,12 @@ const Typing = {
         if (!this.el) return;
 
         this.words = [
-            "Software Engineer",
-            "Delphi Developer",
-            "Python Specialist",
-            "Firebird Expert",
+            "Engenheiro de Software em formação",
+            "Desenvolvedor Delphi",
+            "Estudioso",
+            "Analista",
             "ERP Architect",
-            "System Designer"
+            "Designer de sistemas"
         ];
 
         this.indexWord = 0;
