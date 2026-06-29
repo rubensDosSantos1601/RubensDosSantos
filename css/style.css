@@ -1088,3 +1088,387 @@ nav{
     transition:.3s ease;
 
 }
+
+/* ==========================================================
+                    ARTIGOS
+========================================================== */
+
+.articles{
+
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    margin-top:60px;
+
+}
+
+.article-card{
+
+    display:grid;
+
+    grid-template-columns:85% 15%;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.article-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(59,130,246,.45);
+
+}
+
+.article-info{
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.article-category{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.article-info h3{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.article-info p{
+
+    color:var(--text2);
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+
+.article-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.article-button:hover{
+
+    transform:translateX(10px);
+
+}
+
+.article-cover{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.article-cover img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.article-card:hover .article-cover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+                        CONTATO
+========================================================== */
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:70px;
+
+    margin-top:70px;
+
+}
+
+.contact-small{
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+
+}
+
+.contact-info h3{
+
+    font-size:42px;
+
+    margin:18px 0;
+
+    line-height:1.2;
+
+}
+
+.contact-info p{
+
+    color:var(--text2);
+
+    margin-bottom:40px;
+
+}
+
+.contact-cards{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.contact-card{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    transition:.35s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateX(10px);
+
+    border-color:var(--primary);
+
+}
+
+.contact-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,var(--primary),#2563eb);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+}
+
+.contact-card strong{
+
+    display:block;
+
+    margin-bottom:5px;
+
+}
+
+.contact-card span{
+
+    color:var(--text2);
+
+    font-size:14px;
+
+}
+
+/* FORM */
+
+.contact-form{
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:25px;
+
+    padding:45px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+}
+
+.contact-form form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+    background:#0f172a;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:14px;
+
+    padding:18px;
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+.contact-form input:focus,
+
+.contact-form textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 15px rgba(59,130,246,.2);
+
+}
+
+.contact-form textarea{
+
+    height:180px;
+
+}
+
+.contact-form button{
+
+    margin-top:10px;
+
+}
+.contact-button{
+
+    width:100%;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    transition:.35s;
+
+}
+
+.contact-button svg{
+
+    transition:.35s;
+
+}
+
+.contact-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(59,130,246,.35);
+
+}
+
+.contact-button:hover svg{
+
+    transform:translateX(6px);
+
+}
+
+.contact-button:active{
+
+    transform:scale(.98);
+
+}

@@ -207,11 +207,29 @@
 
     }
 
-    .articles{
+@media (max-width:768px){
+
+    .article-card{
 
         grid-template-columns:1fr;
 
     }
+
+    .article-cover{
+
+        height:250px;
+
+        order:-1;
+
+    }
+
+    .article-info{
+
+        padding:25px;
+
+    }
+
+}
 
     /* -------------------------
        TIMELINE
@@ -470,5 +488,38 @@
         scroll-behavior:auto !important;
 
     }
+
+}
+@media(max-width:900px){
+
+.contact-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-info{
+
+    text-align:center;
+
+}
+
+.contact-info h3{
+
+    font-size:34px;
+
+}
+
+.contact-cards{
+
+    margin-bottom:20px;
+
+}
+
+.contact-card{
+
+    text-align:left;
+
+}
 
 }
